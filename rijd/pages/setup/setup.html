@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rijd (SetUp)</title>
+    <link rel="stylesheet" href="setup.css">
+    <link rel="icon" href="/media/favicon.png">
+</head>
+<body>
+    <div class="top">
+        <h1>Rijd</h1>
+        <br>
+        <h3>Trage deine Auto und Fahrdaten ein</h3>
+    </div>
+    <div class="container">
+        <h2>Fahrzeugtyp</h2>
+        
+        <select name="car-option" id="car-option">
+            <option value="benzin">Benzin</option>
+            <option value="diesel">Diesel</option>
+            <option value="hybrid">Plug-In Hybrid</option>
+            <option value="elektrisch">Elektrisch</option>
+        </select>
+        
+        <h2>Verbrauch (L÷100km)</h2>
+        <input id="verbrauch" type="number" placeholder="L÷100km" class="verbrauch"/>
+    </div>
+
+    <div class="button-box">
+        <button onclick="save()">Fertig</button>
+    </div>
+    <script src="setup.js"></script>
+</body>
+</html>
