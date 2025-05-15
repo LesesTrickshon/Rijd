@@ -16,3 +16,12 @@
 .nav a:active{
     color: #ca9ee6;
 }
+
+.top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #181825;
+    border-radius: 10px;
+    margin: 10px;
+  }

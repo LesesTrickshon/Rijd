@@ -15,5 +15,12 @@ function save(){
         console.log("No User Data found. Created new Variables");
     }
 
-    window.location.href = "/pages/main/main.html"
+    window.location.href = "/pages/main/main.html";
 }
+
+const textInput = document.getElementById('verbrauch');
+textInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        save();
+    }
+});

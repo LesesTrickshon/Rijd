@@ -55,3 +55,7 @@ select{
 .delete button:active{
     background: #f5c2e7;
 }
+
+.container{
+    padding: 20px;
+}

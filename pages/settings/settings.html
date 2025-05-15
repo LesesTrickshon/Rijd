@@ -12,31 +12,35 @@
 <body>
     <div class="nav">
         <a href="/pages/main/main.html" onclick="save()"><i class="fa fa-house"></i></a>
+        <a href="/pages/tracker/tracker.html" onclick="save()"><i class="fa-solid fa-location-dot"></i></a>
         <a href="/pages/book/book.html" onclick="save()"><i class="fa fa-book-open"></i></a>
-        <a href="/pages/settings/settings.html" onclick="save()"><i class="fa fa-gear"></i></a>
+        <a href="/pages/settings/settings.html" onclick="save()" style="color: #ca9ee6;"><i class="fa fa-gear"></i></a>
     </div>
 
     <div class="top">
-        <h1>Rijd</h1>
-        <br>
-        <h3>Trage deine Auto und Fahrdaten ein</h3>
+        <h1>Einstellungen</h1>
+        <!--br>
+        <h3>Trage deine Auto und Fahrdaten ein</h3-->
     </div>
-    <h2>Fahrzeugtyp</h2>
-    
-    <select name="car-option" id="car-option">
-        <option value="benzin">Benzin</option>
-        <option value="diesel">Diesel</option>
-        <option value="hybrid">Plug-In Hybrid</option>
-        <option value="elektrisch">Elektrisch</option>
-    </select>
-      
-    <h2>Verbrauch (L÷100km)</h2>
-    <input id="verbrauch" type="number" placeholder="L÷100km" class="verbrauch"/>
 
-    <div class="delete">
-        <h2>Daten Löschen</h2>
-        <button onclick="Reset_Data()">Clear localStorage</button>
-        <button onclick="RM_Data()" >Remove localStorage Key</button>
+    <div class="container">
+        <h2>Fahrzeugtyp</h2>
+        
+        <select name="car-option" id="car-option">
+            <option value="benzin">Benzin</option>
+            <option value="diesel">Diesel</option>
+            <option value="hybrid">Plug-In Hybrid</option>
+            <option value="elektrisch">Elektrisch</option>
+        </select>
+        
+        <h2>Verbrauch (L÷100km)</h2>
+        <input id="verbrauch" type="number" placeholder="L÷100km" class="verbrauch"/>
+
+        <div class="delete">
+            <h2>Daten Löschen</h2>
+            <button onclick="Reset_Data()">Clear localStorage</button>
+            <button onclick="RM_Data()" >Remove localStorage Key</button>
+        </div>
     </div>
     
 

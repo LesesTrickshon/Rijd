@@ -12,10 +12,18 @@
 <body>
     <div class="nav">
         <a href="/pages/main/main.html"><i class="fa fa-house"></i></a>
-        <a href="/pages/book/book.html"><i class="fa fa-book-open"></i></a>
+        <a href="/pages/tracker/tracker.html"><i class="fa-solid fa-location-dot"></i></a>
+        <a href="/pages/book/book.html" style="color: #ca9ee6;"><i class="fa fa-book-open"></i></a>
         <a href="/pages/settings/settings.html"><i class="fa fa-gear"></i></a>
     </div>
-    Hallo
-    <button id="add" class="add"><i class="fa fa-plus"></i></button>
+    
+    <button id="add" class="add" onclick="window.location.href = '/pages/new-ride/new-ride.html'"><i class="fa fa-plus"></i></button>
+
+    <div class="top">
+        <h1>Logbuch Einträge</h1>
+    </div>
+
+    <div class="container" id="container"></div>
+    <script src="book.js"></script>
 </body>
 </html>

@@ -1,7 +1,8 @@
 let usage = localStorage.getItem("distance");
 
 if (usage !== null){
-    document.getElementById("button").innerHTML = 'Open App'
+    window.location.href = '/pages/main/main.html';
+    // document.getElementById("button").innerHTML = 'Open App'
 }
 
 function open_page(){

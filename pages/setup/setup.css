@@ -68,3 +68,7 @@ select{
     font-size: 18px;
     border-radius: 10px;
 }
+
+.container{
+    padding: 20px;
+}
