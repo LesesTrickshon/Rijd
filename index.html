@@ -1,23 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rijd</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="/media/favicon.png">
-</head>
-<body>
-    <div class="top">
-        <h1>Rijd</h1>
-    </div>
-    <div class="button-box">
-        <button class="setup" id="button" onclick="open_page()" >Start SetUp</button>
-    </div>
-    <div class="img-container">
-        <img src="/media/logo.png"/>
-    </div>
-    
-    <script src="app.js"></script>
-</body>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
