@@ -1,4 +1,4 @@
-body{
+body {
     padding: 0;
     margin: 0;
     background-color: #1e1e2e;
@@ -6,7 +6,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.top{
+.top {
     margin: 10px;
     background-color: #181825;
     border-radius: 10px;
@@ -16,7 +16,7 @@ body{
     justify-content: center;
 }
 
-select{
+select {
     width: 150px;
     height: 50px;
     padding: 10px;
@@ -27,7 +27,7 @@ select{
     border-radius: 10px;
 }
 
-.verbrauch{
+.verbrauch {
     width: 150px;
     height: 20px;
     padding: 10px;
@@ -38,22 +38,57 @@ select{
     border-radius: 10px;
 }
 
-.delete button{
+.delete button {
     border: none;
     background: #f38ba8;
     padding: 10px;
     border-radius: 25rem;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    transition: padding 0.5s;
+    transition: background 0.1s;
     color: #000;
+    margin: 5px;
 }
 
-.delete button:active{
+.delete button:active {
     background: #f5c2e7;
 }
 
 
-.container{
+.save button,
+.save a {
+    display: inline-block;
+    width: 200px;
+    border: none;
+    background: #a6adc8;
+    padding: 10px;
+    border-radius: 25rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background 0.1s;
+    color: #000;
+    margin: 5px;
+    text-decoration: none;
+    font-size: small;
+}
+
+.save button:active,
+.save a:active {
+    /*background: #bac2de;*/
+    background: #fff;
+}
+
+/*.save {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}*/
+
+.version {
+    position: absolute;
+    bottom: 8%;
+}
+
+.container {
     padding: 20px;
 }

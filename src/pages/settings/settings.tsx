@@ -1,20 +1,23 @@
 import TabBar from "../../components/tabbar";
 import styles from "./settings.module.css";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 function Settings() {
   let clear: any[] = [];
+  const verbrauchRef = useRef<HTMLInputElement>(null);
+  const car_typeRef = useRef<HTMLSelectElement>(null);
 
   useEffect(() => {
-    document.getElementById("verbrauch").value =
-      localStorage.getItem("verbrauch");
+    if (verbrauchRef.current) {
+      verbrauchRef.current.value = localStorage.getItem("verbrauch") ?? "";
+    }
   }, []);
 
   const Reset_Data = () => {
     if (confirm("You are removing all your booked Data!")) {
-      localStorage.setItem("distance", 0);
-      localStorage.setItem("time", 0);
-      localStorage.setItem("emmision", 0);
+      localStorage.setItem("distance", "0");
+      localStorage.setItem("time", "0");
+      localStorage.setItem("emmision", "0");
       localStorage.setItem("array", JSON.stringify(clear));
     }
   };
@@ -33,8 +36,8 @@ function Settings() {
   };
 
   const save = () => {
-    let car_type = document.getElementById("car-option").value;
-    let verbrauch = document.getElementById("verbrauch").value;
+    let car_type: string = String(car_typeRef.current?.value);
+    let verbrauch: string = String(verbrauchRef.current?.value);
     console.log(car_type);
     console.log(verbrauch);
     localStorage.setItem("car_type", car_type);
@@ -50,7 +53,7 @@ function Settings() {
       <div className={styles.container}>
         <h2>Fahrzeugtyp</h2>
 
-        <select name="car-option" id="car-option">
+        <select name="car-option" id="car-option" ref={car_typeRef}>
           <option value="benzin">Benzin</option>
           <option value="diesel">Diesel</option>
           <option value="hybrid">Plug-In Hybrid</option>
@@ -63,6 +66,7 @@ function Settings() {
           type="number"
           placeholder="L÷100km"
           className={styles.verbrauch}
+          ref={verbrauchRef}
         />
 
         <div className={styles.delete}>
@@ -74,6 +78,7 @@ function Settings() {
           >
             Clear localStorage
           </button>
+          <br />
           <button
             onClick={() => {
               RM_Data();
@@ -82,6 +87,22 @@ function Settings() {
             Remove localStorage Key
           </button>
         </div>
+        <h2>Speichern</h2>
+        <div className={styles.save}>
+          <a
+            href={`data:text/json;charset=utf-8,${encodeURIComponent(
+              JSON.stringify(JSON.parse(localStorage.getItem("array") ?? ""), null, 2) // null, 2 für schöne Formatierung
+            )}`}
+            download="rijd-data.json"
+          >
+            {"JSON exportieren"}
+          </a>
+          <br />
+          <button>JSON importieren</button>
+          <br />
+          <button onClick={() => {save();}}>Einstellungen Speichern</button>
+        </div>
+        <p className={styles.version}>Version ⚛️A_0.3</p>
       </div>
       <TabBar />
     </>

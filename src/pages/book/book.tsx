@@ -3,7 +3,7 @@ import styles from "./book.module.css";
 import { useState } from "react";
 
 function Book() {
-  const [array, setArray] = useState<any[]>(() => {
+  const [array, _setArray] = useState<any[]>(() => {
     try {
       const stored = localStorage.getItem("array");
       return stored ? JSON.parse(stored) : [];
