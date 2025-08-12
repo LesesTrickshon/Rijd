@@ -4,18 +4,18 @@
 ***
 # Need to Know:
 ## Es gibt zwei variantent dieser App:
-- **Stable**
-  - Offizieller download als Alpha v0.1 & Alpha v0.2
-  - Basiert auf HTML
-  - Wird nicht mehr weiter entwickelt
-  - Dateien in der Main-Branch
- 
-- **React**
-  - APKs und IPAs müssen selber gebaut werden
+- **React ⚛️**
+  - Für Nutzung empfohlen
   - Basiert auf React Typescript
   - Wird aktiv weiterentwickelt
-  - Dateien in der React-Brach
-  - Sehr unstabil
+  - Dateien in der Main-Branch
+  - Alle Neue Versionen
+ 
+- **HTML 🌐**
+  - Wird **nicht** mehr weiter entwickelt
+  - Basiert auf HTML
+  - Offizieller download als Alpha v0.1 & Alpha v0.2
+  - Dateien in der old-html-version-Branch
 ---
 ## Legale Hinweisung
 Diese App ist eigentum der SWK mit unter der Aufsicht von Johannes Kubrat.
