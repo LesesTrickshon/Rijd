@@ -1,4 +1,4 @@
-# **Rijd** <img width="30" height="30" src="https://github.com/LesesTrickshon/Rijd/blob/main/media/favicon.png?raw=true">
+# **Rijd** <img width="30" height="30" src="https://github.com/LesesTrickshon/Rijd/blob/old-html-version/media/favicon.png?raw=true">
 ## Logbuch-App für Autoafahrten
 ![Thumbnail](https://github.com/LesesTrickshon/Rijd/blob/main/Thumbnail.png?raw=true)
 ***
