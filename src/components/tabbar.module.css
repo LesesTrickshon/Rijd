@@ -1,5 +1,5 @@
 .tabbar {
-    width: 100%;
+    width: calc(100% - 20px);
     height: 75px;
     display: flex;
     flex-direction: row;
@@ -7,6 +7,19 @@
     justify-content: space-around;
     background-color: grey;
     position: fixed;
-    bottom: 0;
+    bottom: 10px;
+    left: 10px;
     background-color: #181825;
+    border-radius: 25rem;
+    filter: drop-shadow(0 0 10px #cba6f744);
+}
+
+.tabbar a {
+    color: #cba6f7;
+    font-size: 40px;
+    transition: filter 0.2s;
+}
+
+.tabbar a:active {
+    filter: drop-shadow(0 0 30px #cba6f7);
 }

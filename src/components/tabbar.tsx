@@ -1,12 +1,13 @@
 import styles from "./tabbar.module.css";
+import { TiHomeOutline, TiLocationOutline, TiBookmark, TiCogOutline } from "react-icons/ti";
 
 function TabBar() {
   return (
     <div className={styles.tabbar}>
-      <a href="/main">Main</a>
-      <a href="/tracker">Tracker</a>
-      <a href="/book">Book</a>
-      <a href="/settings">Settings</a>
+      <a href="/main"><TiHomeOutline /></a>
+      <a href="/tracker"><TiLocationOutline /></a>
+      <a href="/book"><TiBookmark /></a>
+      <a href="/settings"><TiCogOutline /></a>
     </div>
   );
 }

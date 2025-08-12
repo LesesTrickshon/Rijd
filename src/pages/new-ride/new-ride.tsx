@@ -1,6 +1,7 @@
 import TabBar from "../../components/tabbar";
 import styles from "./new-ride.module.css";
 import { useState, useRef, useEffect } from "react";
+import { TiPrinter } from "react-icons/ti";
 
 function NewRide() {
   // Stores JSX <input /> input
@@ -84,7 +85,7 @@ function NewRide() {
           }}
           className={styles.button}
         >
-          Eintragen
+          <TiPrinter />
         </button>
       </div>
 

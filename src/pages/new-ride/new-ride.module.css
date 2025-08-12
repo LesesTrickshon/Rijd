@@ -1,10 +1,11 @@
-body{
+body {
     margin: 0;
     padding: 0;
     background-color: #1e1e2e;
     color: #ccd6f4;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 /*hey*/
 .info {
     margin: 10px;
@@ -13,9 +14,10 @@ body{
     box-sizing: border-box;
     background-color: #181825;
     border-radius: 10px;
+    filter: drop-shadow(0 0 5px #cba6f722)
 }
 
-input{
+input {
     width: 150px;
     height: 20px;
     padding: 10px;
@@ -26,24 +28,34 @@ input{
     border-radius: 10px;
 }
 
-.button{
+.button {
+    width: 75px;
+    height: 75px;
+    /*color: #cdd6f4;*/
+    color: #cba6f7;
     border: none;
-    background: #74C7EC;
-    background: linear-gradient(90deg, rgba(116, 199, 236, 1) 0%, rgba(203, 166, 247, 1) 100%);
-    padding: 10px;
-    border-radius: 25rem;
+    /*background-color: #313244;*/
+    background-color: #181825;
+    font-size: 30px;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    transition: padding 0.5s;
-    color: #000;
+    border-radius: 25rem;
+
+    position: fixed;
+    bottom: 120px;
+    right: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0 0 5px #cba6f744);
+    transition: filter 0.2s;
 }
 
-.button:active{
-    background: #c0edfc;
-    background: linear-gradient(90deg, rgba(192, 237, 252, 1) 0%, rgba(219, 201, 240, 1) 100%);
+.button:active {
+    filter: drop-shadow(0 0 15px #cba6f744);
 }
 
-.button_container{
+.button_container {
     width: 100%;
     position: fixed;
     bottom: 100px;
@@ -53,6 +65,6 @@ input{
     align-items: center;
 }
 
-.spacer{
+.spacer {
     height: 500px;
 }

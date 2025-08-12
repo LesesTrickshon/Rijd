@@ -19,33 +19,24 @@ body {
     margin: 10px;
 }
 
-.tracker-button-container {
+.tracker {
     width: 100%;
-    position: absolute;
-    top: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.tracker-button {
-    background: none;
+    height: 500px;
     border: none;
-    color: var(--button-color);
-    font-size: 100px;
-}
-.tracker-button:active {
-    opacity: 67%;
+    background: none;
+    color: #cba6f7;
+    position: absolute;
+    font-size: 200px;
 }
 
 .info {
-    margin: 10px;
+    width: calc(100% - 40px);
+    position: absolute;
+    left: 10px;
+    bottom: 100px;
     padding: 10px;
-    width: calc(100% - 20px);
-    box-sizing: border-box;
+    margin-top: 10px;
     background-color: #181825;
     border-radius: 10px;
-    position: absolute;
-    bottom: 80px;
+    filter: drop-shadow(0 0 5px #cba6f722);
 }

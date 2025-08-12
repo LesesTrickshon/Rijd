@@ -1,6 +1,7 @@
 import TabBar from "../../components/tabbar";
 import styles from "./book.module.css";
 import { useState } from "react";
+import { TiPlus } from "react-icons/ti";
 
 function Book() {
   const [array, _setArray] = useState<any[]>(() => {
@@ -21,7 +22,7 @@ function Book() {
           window.location.href = "/new-ride";
         }}
       >
-        <h2>+</h2>
+        <h2><TiPlus /></h2>
       </button>
 
       <div className="top">

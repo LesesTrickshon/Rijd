@@ -1,5 +1,6 @@
 import TabBar from "../../components/tabbar";
-import "./tracker.module.css";
+import styles from "./tracker.module.css";
+import { TiLocation } from "react-icons/ti";
 
 function Tracker() {
   return (
@@ -8,13 +9,9 @@ function Tracker() {
         <h1>Zähler</h1>
       </div>
 
-      <div className="tracker-button-container">
-        <button className="tracker-button">
-          <h1>Toggle</h1>
-        </button>
-      </div>
+      <button className={styles.tracker}><TiLocation /></button>
 
-      <div className="info">
+      <div className={styles.info}>
         <h1>Statistik</h1>
         <p>Strecke</p>
         <p>Fahrzeit</p>

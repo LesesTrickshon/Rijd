@@ -1,4 +1,4 @@
-body{
+body {
     padding: 0;
     margin: 0;
     background-color: #1e1e2e;
@@ -13,6 +13,7 @@ body{
     box-sizing: border-box;
     background-color: #181825;
     border-radius: 10px;
+    filter: drop-shadow(0 0 5px #cba6f744);
 }
 
 .top {
