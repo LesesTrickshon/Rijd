@@ -17,6 +17,6 @@
   - Offizieller download als Alpha v0.1 & Alpha v0.2
   - Dateien in der old-html-version-Branch
 ---
-## Legale Hinweisung
+## Legale Hinweis
 Diese App ist eigentum der SWK mit unter der Aufsicht von Johannes Kubrat.
 Vielleicht werden andere Versionen dieser App nicht opensource bleiben.
