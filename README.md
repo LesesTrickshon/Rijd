@@ -1,5 +1,5 @@
 # **Rijd** <img width="30" height="30" src="https://github.com/LesesTrickshon/Rijd/blob/old-html-version/media/favicon.png?raw=true">
-[English README.md here](./🇬🇧-PERUSE-MY-WORDS.md)
+[🇬🇧 English README.md](./🇬🇧-PERUSE-MY-WORDS.md)
 ## Logbuch-App für Autoafahrten
 ![Thumbnail](https://github.com/LesesTrickshon/Rijd/blob/main/Thumbnail.png?raw=true)
 ***
