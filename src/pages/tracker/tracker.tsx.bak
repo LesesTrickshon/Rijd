@@ -1,0 +1,89 @@
+import { useEffect, useState } from "react";
+import TabBar from "../../components/tabbar";
+import styles from "./tracker.module.css";
+import { TiLocation } from "react-icons/ti";
+import { success, error } from "./location";
+
+function Tracker() {
+  const [main_button_toggle, setMainButtonToggle] = useState(false);
+  const [driving_text, setDriving_text] = useState("");
+  const [safetyTrigger, setSafetyTrigger] = useState(false);
+  const [lat, setLat] = useState(null);
+  const [lon, setLon] = useState(null);
+  const [places, setPlaces] = useState([]) as any[];
+  const [id, setID] = useState(-1);
+
+  useEffect(() => {
+    // Variables:
+    let intervalID: any;
+    const getCoords = () => {
+      // Function that saves the coords
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => success(position, setLat, setLon, id, setPlaces),
+          error,
+        );
+        setID((prev: any) => prev + 1); // Basically the Gigachad of setID(id + 1);
+      }
+    };
+
+    // Actual beginning is here
+    if (main_button_toggle === true) {
+      setDriving_text("🔴 Recording");
+      setSafetyTrigger(true);
+      // Do this every 60 seconds
+      getCoords();
+      intervalID = setInterval(() => {
+        getCoords();
+      }, 1000);
+    } else if (main_button_toggle === false) {
+      setDriving_text("");
+      console.log(places);
+      if (safetyTrigger) {
+        // safetyTrigger does not need to exsist. I just like to have it as a failsave
+        //push the Data
+        //push();
+        //Delete OG Data
+        setPlaces([]);
+        //setID(-1);
+        setSafetyTrigger(false);
+      }
+    }
+    return () => {
+      if (intervalID) {
+        clearInterval(intervalID);
+      }
+    };
+  }, [main_button_toggle]);
+
+  return (
+    <>
+      <div className="top">
+        <h1>Zähler</h1>
+      </div>
+
+      <button
+        className={styles.tracker}
+        onClick={() => {
+          setMainButtonToggle(!main_button_toggle);
+        }}
+      >
+        <TiLocation />
+      </button>
+
+      <h1 className={styles.driving_tag}>{driving_text}</h1>
+
+      <div className={styles.info}>
+        <h1>Statistik</h1>
+        <p>Strecke</p>
+        <p>Lat: {lat}</p>
+        <p>Long: {lon}</p>
+        {/*<p>Fahrzeit</!p>
+        <p>C02 Außstoß</p>*/}
+      </div>
+      <TabBar />
+    </>
+  );
+}
+
+export default Tracker;

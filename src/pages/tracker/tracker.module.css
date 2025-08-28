@@ -29,6 +29,15 @@ body {
     font-size: 200px;
 }
 
+.driving_tag {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    color: #cba6f7;
+    position: absolute;
+    top: 450px;
+}
+
 .info {
     width: calc(100% - 40px);
     position: absolute;

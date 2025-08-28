@@ -15,16 +15,6 @@ function Book() {
 
   return (
     <>
-      <button
-        id="add"
-        className={styles.add}
-        onClick={() => {
-          window.location.href = "/new-ride";
-        }}
-      >
-        <h2><TiPlus /></h2>
-      </button>
-
       <div className="top">
         <h1>Logbuch Einträge</h1>
       </div>
@@ -33,6 +23,7 @@ function Book() {
         <input type="text" placeholder="Suche..." id="search-bar" />
       </div>
 
+      {/*Shows All the lists*/}
       <li className={styles.container}>
         {array.map((content) => (
           <span key={content.id} className={styles.info}>
@@ -43,6 +34,18 @@ function Book() {
           </span>
         ))}
       </li>
+
+      {/*The plus button infront of the List*/}
+      <button
+        id="add"
+        className={styles.add}
+        onClick={() => {
+          window.location.href = "/new-ride";
+        }}
+      >
+        <h2><TiPlus /></h2>
+      </button>
+
       <TabBar />
     </>
   );
