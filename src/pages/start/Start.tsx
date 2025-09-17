@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import styles from "./Start.module.css";
+import logo from "../../assets/logo.png";
 
 // Page Imports:
 
@@ -33,7 +34,7 @@ function Start() {
         </button>
       </div>
       <div className={styles.img_container}>
-        <img src="/src/assets/logo.png" />
+        <img src={logo} />
       </div>
     </>
   );

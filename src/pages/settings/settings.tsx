@@ -1,12 +1,14 @@
 import TabBar from "../../components/tabbar";
 import styles from "./settings.module.css";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef , useState } from "react";
 import { TiPrinter, TiExportOutline, TiDownloadOutline } from "react-icons/ti";
+import reactImage from "../../assets/react.svg";
 
 function Settings() {
   let clear: any[] = [];
   const verbrauchRef = useRef<HTMLInputElement>(null);
   const car_typeRef = useRef<HTMLSelectElement>(null);
+  const [car_val, setCar_val] = useState(localStorage.getItem("car_type") || "benzin");
 
   useEffect(() => {
     if (verbrauchRef.current) {
@@ -53,14 +55,19 @@ function Settings() {
 
       <div className={styles.container}>
         <div className={styles.info}>
-         <h2>Fahrzeugtyp</h2>
+          <h2>Fahrzeugtyp</h2>
 
-          <select name="car-option" id="car-option" ref={car_typeRef}>
+          <select
+            name="car-option"
+            id="car-option" 
+            ref={car_typeRef}
+            value={car_val}
+            onChange={(e) => setCar_val(e.target.value)}
+          >
             <option value="benzin">Benzin</option>
             <option value="diesel">Diesel</option>
-            <option value="hybrid">Plug-In Hybrid</option>
             <option value="elektrisch">Elektrisch</option>
-          </select> 
+          </select>
         </div>
 
         <div className={styles.info}>
@@ -99,28 +106,39 @@ function Settings() {
           <div className={styles.info_e_buttons}>
             <a
               href={`data:text/json;charset=utf-8,${encodeURIComponent(
-                JSON.stringify(JSON.parse(localStorage.getItem("array") ?? ""), null, 2) // null, 2 für schöne Formatierung
+                JSON.stringify(
+                  JSON.parse(localStorage.getItem("array") ?? ""),
+                  null,
+                  2
+                ) // null, 2 für schöne Formatierung
               )}`}
               download="rijd-data.json"
             >
               <TiExportOutline />
             </a>
-            <button><TiDownloadOutline /></button>
+            <button>
+              <TiDownloadOutline />
+            </button>
           </div>
-          
+        </div>
+        <div className={styles.info}>
+          <h2>Version</h2>
+          <div className={styles.version_container}>
+            <h3>Alpha 0.4</h3>
+            <img src={reactImage} style={{ width: "30px", padding: "10px" }} />
           </div>
-          <div className={styles.info}>
-            <h2>Version</h2>
-            <div className={styles.version_container}>
-              <h3>Alpha 0.4</h3>
-              <img src="/src/assets/react.svg" style={{ width: '30px', padding: "10px"}} />
-            </div>
-            
-          </div>
+        </div>
 
-          <button className={styles.save} onClick={() => {save();} }><TiPrinter /></button>
+        <button
+          className={styles.save}
+          onClick={() => {
+            save();
+          }}
+        >
+          <TiPrinter />
+        </button>
 
-          <div style={{height: '500px'}}/>
+        <div style={{ height: "500px" }} />
       </div>
       <TabBar />
     </>

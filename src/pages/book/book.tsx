@@ -19,9 +19,9 @@ function Book() {
         <h1>Logbuch Einträge</h1>
       </div>
 
-      <div className={styles.search_bar}>
+      {/*<div className={styles.search_bar}>
         <input type="text" placeholder="Suche..." id="search-bar" />
-      </div>
+      </div>*/}
 
       {/*Shows All the lists*/}
       <li className={styles.container}>
@@ -43,7 +43,9 @@ function Book() {
           window.location.href = "/new-ride";
         }}
       >
-        <h2><TiPlus /></h2>
+        <h2>
+          <TiPlus />
+        </h2>
       </button>
 
       <TabBar />
